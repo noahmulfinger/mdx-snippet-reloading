@@ -2,5 +2,16 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
-}
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/documentation`,
+        name: `documentation`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`
+    },
+  ],
+};
